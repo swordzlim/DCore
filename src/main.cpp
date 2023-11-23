@@ -10,37 +10,21 @@ using namespace std;
 // l: out, k: in;
 // 0: out, 1: in; 
 int main(int argc, char *argv[]) {
-    // // input parameters
-    // cmdline::parser a;
-    // a.add<string>("file", 'f', "filename", true, "");
-    // a.add<int>("a", 'a', "algorithm", true);
-    // a.add<int>("t", 't', "threads", true);
+    // input parameters
+    cmdline::parser a;
+    a.add<string>("file", 'f', "filename", true, "");
+    a.add<int>("a", 'a', "algorithm", true);
+    a.add<int>("t", 't', "threads", true);
   
-    // a.parse_check(argc, argv);
+    a.parse_check(argc, argv);
 
-    // // Read graph
-    // string filepath = a.get<string>("file");
-    // int type = a.get<int>("a");
-    // int t = a.get<int>("t");
-    // FILE* dFile = fopen(filepath.c_str(), "r");
-
-    // printf("file: %s; \t algorithm: %d; \t threads: %d\n", filepath.c_str(), type, t);
-
-
-    string filepath = "../../materials/em.txt";
-    // string filepath = "/home/chunxu/cxx/Dcore_tool/materials/am.txt";
-    // string filepath = "/home/chunxu/cxx/Dcore_tool/materials/em.txt";
-    // string filepath = "/home/chunxu/cxx/Dcore_tool/materials/po.txt";
-    // string filepath = "/home/chunxu/cxx/Dcore_tool/materials/cite.txt";
-    // string filepath = "/home/chunxu/cxx/Dcore_tool/materials/lj.txt";
-    // string filepath = "/home/chunxu/cxx/Dcore_tool/materials/hw.txt";
-    // string filepath = "/home/chunxu/cxx/Dcore_tool/materials/it.txt";
-    // string filepath = "/home/chunxu/cxx/Dcore_tool/materials/ew2013.txt";
-    // string filepath = "/home/chunxu/cxx/Dcore_tool/materials/uk2007.txt";
-    // string filepath = "/home/chunxu/cxx/Dcore_tool/materials/scalability/em/em20.txt";
+    // Read graph
+    string filepath = a.get<string>("file");
+    int type = a.get<int>("a");
+    int t = a.get<int>("t");
     FILE* dFile = fopen(filepath.c_str(), "r");
-    int type = 3;
-    int t = 32;
+
+    printf("file: %s; \t algorithm: %d; \t threads: %d\n", filepath.c_str(), type, t);
 
     clock_t io_begin = clock();
 
