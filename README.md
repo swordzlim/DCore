@@ -10,12 +10,12 @@
 # Compiling and Running
 ## Compiling the program
 ```
-g++ -std=c++17 -O0 -g -fopenmp ${fileDirname}/*.cpp -o ${FILE_NAME}
+g++ -std=c++17 -fopenmp ${fileDirname}/*.cpp -o ${FILE_NAME}
 ```
 
 For example:
 ```
-g++ -std=c++17 -O0 -g -fopenmp ./src/*.cpp -o dcore
+g++ -std=c++17 -fopenmp ./src/*.cpp -o dcore
 ```
 
 
