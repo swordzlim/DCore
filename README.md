@@ -2,9 +2,9 @@
 * Peeling: the state-of-the-art sequential D-core decomposition algorithm;
 * AC: the distributed anchored coreness-based D-core decomposition algorithm, and we parallelize it by using multi-threads;
 * SC: the state-of-the-art distributed skyline coreness-based D-core decomposition algorithm, and we parallelize it by using multi-threads;
-* PDC: our proposed parallel D-core decomposition algorithm, which is depicted in Algorithm 3;
-* PDC+: our proposed parallel D-core decomposition algorithm in Algorithm 3 with shell-based pruning strategy in Section 5.1;
-* Fast-PDC: our proposed parallel D-core decomposition algorithm, listed in Algorithm 5.
+* ParPeel: our proposed parallel D-core decomposition algorithm, which is depicted in Algorithm 3;
+* ParPeel+: our proposed parallel D-core decomposition algorithm in Algorithm 3 with shell-based pruning strategy in Section 5.1;
+* Shell-PDC: our proposed parallel D-core decomposition algorithm, listed in Algorithm 5.
 
 
 # Compiling and Running
@@ -21,7 +21,7 @@ g++ -std=c++17 -fopenmp ./src/*.cpp -o dcore
 
 ## Running the program:
 ```
-./output/${FILE_NAME} -t ${THREAD} -f ${GRAPH_FILE} -a ${ALGORITHM}
+./${FILE_NAME} -t ${THREAD} -f ${GRAPH_FILE} -a ${ALGORITHM}
 ```
 
 For example:
@@ -60,9 +60,9 @@ The id of algorithm will be running, which the id is presented as following.
 | 1 | Peeling |
 | 2 | AC |
 | 3 | SC |
-| 4 | PDC |
-| 5 | PDC+ |
-| 6 | Fast-PDC |
+| 4 | ParPeel |
+| 5 | ParPeel+ |
+| 6 | Shell-PDC |
 
 # Other
 * The ten datasets used in paper are availabe from:
@@ -123,4 +123,3 @@ The id of algorithm will be running, which the id is presented as following.
 </div>
 
 * We give an example of Email-EuAll in ```./materials/```, and running time of all algorithms in ```./result/EM/```.
-# DCore
